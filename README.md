@@ -95,16 +95,17 @@ Fatto ciò sarà possibile eseguire un file di launch all'interno della workspac
 ## 4. Lancio Del Software
 Per poter lanciare il software e verificare che tutto nella macchina virtuale funzioni correttamente, seguire la seguente guida:
  * Aprire il terminale
- * `$ cd /home` se non si è già collocati al suo interno
- * `$ mkdir workspace_catkin`
- * `$ cd workspace_catkin`
- * `$ mkdir src`
- * `$ cd src/`
- * `$ catkin_create_pkg prova_gazebo` a 'prova_gazebo' può essere messo qualsiasi nome si voglia, per semplicità facciamo questo esempio.
- * `$ cd prova_gazebo`
- * `$ mkdir launch | mkdir worlds`
- * `$ cd launch`
- * `$ sudo nano prova.launch`
+ 
+                $ mkdir workspace_catkin
+                $ cd workspace_catkin
+                $ mkdir src
+                $ cd src
+                $ catkin_create_pkg prova_gazebo --> 'prova_gazebo' può essere sostituito con qualsiasi nome si voglia, per semplicità facciamo questo esempio.
+                $ cd prova_gazebo
+                $ mkdir launch | mkdir worlds
+                $ cd launch
+                $ sudo nano prova.launch
+                
  * Si aprirà un editor di file e al suo interno copiamo e incolliamo quanto segue:
  
                <launch>
@@ -117,9 +118,10 @@ Per poter lanciare il software e verificare che tutto nella macchina virtuale fu
 
      *N.B. Per i prossimi file che si creeranno, basta sostituire all'interno dei tag la parola 'prova_gazebo' e 'prova.world' con il path e il file world che si vuole utilizzare*
      
- * `$ cd ..`
- * `$ cd worlds`
- * `$ sudo nano prova.world`
+        $ cd ..
+        $ cd worlds
+        $ sudo nano prova.world
+        
  * Si aprirà un editor e si dovrà inserire quanrto segue:
  
           <?xml version="1.0" ?>
@@ -141,11 +143,12 @@ Per poter lanciare il software e verificare che tutto nella macchina virtuale fu
           
      *N.B. Si potrà inserire al suo interno tutte le componenti che si vogliono, chiamate 'model'. In questa piccola porzione di mondo troviamo un terreno, un sole(luminosità radiale) e una stazione di benzina (che potrà essere reperibile insieme a tantissime altre strutture e oggetti all'interno del database online di Gazebo. Esempio: al posto di gas_statio è possibile mettere empty o qualsiasi altro modello di mondo presente a [Questo Link](http://models.gazebosim.org/)*
      
- * `$ cd .. `
- * `$ cd ..`
- * `$ catkin_make`
- * `$ source ~/devel/setup.bash`
- * `$ roslaunch prova_gazebo prova.launch` --> partirà GAzebo e ROS con la simulazione di una stazione di servizio.
+       $ cd .. 
+       $ cd ..
+       $ cd ..
+       $ catkin_make
+       $ source ~/devel/setup.bash
+       $ roslaunch prova_gazebo prova.launch --> partirà GAzebo e ROS con la simulazione di una stazione di servizio.
  
  <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/GasStation.png"/>
  
@@ -159,9 +162,9 @@ Per poter inserire un robot all'interno della scena, basta seguire i seguenti pa
        
   *N.B. Se si sta eseguendo l'OVA, non si avranno problemi, in altri casi bisogna installare il pacchetto aggiuntivo del roboto attraverso il comando `$ git clone https://github.com/RethinkRobotics/baxter_common.git` e ricompilare la workspace con `$ catkin_make`.
   
-* `$ catkin_make`
-* `$ source ~/devel/setup.bash`
-* `$ roslaunch prova_gazebo prova.launch` --> Si aprirà la stazione di servizio con un robot presente sulla scena.
+     $ catkin_make
+     $ source ~/devel/setup.bash
+     $ roslaunch prova_gazebo prova.launch --> Si aprirà la stazione di servizio con un robot presente sulla scena.
 
 <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Gas_baxter.png"/>
 
@@ -197,7 +200,9 @@ In questo paragrafo vedremo come controllare un drone attraverso i comandi impar
 
 *N.B. Nella macchina virtuale scaricata saranno già presente tutti i pacchetti per permettere di controllare un drone. In altri casi bisogna seguire la guida presente in [questo link](https://github.com/ethz-asl/rotors_simulator/wiki/Setup-virtual-keyboard-joystick)
 
-
+Per poter far partire una simulazione con drone controllabile da tastiera, seguire questi passi:
+ * Aprire il terminale
+ * 
 
 
 _________________________________________________________________________________________
