@@ -169,6 +169,17 @@ Per poter inserire un robot all'interno della scena, basta seguire i seguenti pa
 Il software può essere lanciato con tutte le prove e esempi che si trovano online, allo stesso modo, oppure creando, come nella guida, un file di lancio e uno di mondo che vada a rappresentare quello che si vuole realizzare. I vari modelli che è possibile utilizzare sono presenti al seguente [LINK](http://models.gazebosim.org/)
 
 
+## 5. Uso & Comandi di Gazebo
+Una volta fatto partire un package, verrà aperta una finestra di Gazebo con il mondo virtuale che abbiamo creto o che abbiamo importato.
+La finestra di Gazebo deve apparire pressapoco così:
+
+<img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_01.png"/>
+
+*N.B. il file di lanch che abbiamo fatto partire è quello presente nella directory ufficiale, in cui sono presenti tutti gli esempi di simulazione, reperibile a [questo link](https://github.com/ethz-asl/rotors_simulator). Tuttavia la directory è stata già scariocata è presente mella macchina virtuale scaricata. Per poterla far partire basta digitare su terminale i seguenti comandi: `$ cd diffDrive_ws` + `$  source devel/setup.bash` + `$ roslaunch rotors_gazebo mav_hovering_example.launch`. Tali file sono presenti nle persorso `/home/diffDrive_ws/src/rotors_simulation/rotors_gazebo/launch`.
+
+Come possiamo vedere sall'immagine nella parte alta abbiamo la barra degli strumenti, in cui è possibile tutte le operazioni grafiche sulla scena rappresentata.
+
+
 
 _________________________________________________________________________________________
 
