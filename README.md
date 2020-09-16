@@ -202,7 +202,28 @@ In questo paragrafo vedremo come controllare un drone attraverso i comandi impar
 
 Per poter far partire una simulazione con drone controllabile da tastiera, seguire questi passi:
  * Aprire il terminale
- * 
+ 
+         $ cd diffDrive_ws
+         $ source devel/setup.bash
+         $ roslaunch rotors_gazebo mav_with_keyboard.launch mav_name:=firefly world_name:=basic
+         
+    Verrà fatto partire un simulatore con un lettore di comandi attraverso pygame (un plagin di python).
+    
+    <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_05.png"/>
+    
+    *N.B. Potrebbe capitare che durante l'avvio del programma risulti un errore di questo tipo: *
+    <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_04.png"/>
+    
+    *E il controller della tastiera non verrà fuori. Per rislvere ciò eseguire questi comandi da terminale:*
+        
+           $ cd /dev
+           $ sudo chmod -R 777 uinput
+           
+     *Riportarsi in `diffDrive_ws` e rieseguire i comandi.*
+     
+  * Sarà possibile controllare il drone dopo aver cliccato play
+  * I controlli si focalizzano su 8 tasti principali: W, A, S, D, ↓, ↑, →, ←.
+  * I controlli sono estremamente sensibili e bisogna prendere esperienza
 
 
 _________________________________________________________________________________________
