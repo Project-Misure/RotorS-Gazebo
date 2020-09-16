@@ -39,20 +39,20 @@ Per tutti i dettagli rimandiamo alla guida di [ROS.org](http://wiki.ros.org/)<br
 
 #### 3.1.1. Directory Tree
 
--> my-package/<br>
----> CMakeList.txt(file testo standard)<br>
----> package.xml<br>
+     my-package/
+       CMakeList.txt(file testo standard)
+       package.xml
 
 #### 3.1.2. Directory Tree MultiPackage
 
--> workspace/<br>
----> src/<br>
------> package_1/<br>
---------> CMakeList.txt<br>
---------> package.xml<br>
------> package_2/<br>
---------> CMakeList.txt<br>
---------> package.xml<br>
+    workspace/
+     src/
+      package_1/
+        CMakeList.txt
+        package.xml
+      package_2/
+        CMakeList.txt
+        package.xml
 
 #### 3.1.3. Creare un package
 
