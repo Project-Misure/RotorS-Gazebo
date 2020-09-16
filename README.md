@@ -85,6 +85,9 @@ All'interno di `worlds` verranno creati e/o posizionati i file `.world` in cui a
 Per poter compilare un package bisogna eseguire i seguenti passi:
  * `$ cd workspace`
  * `$ catkin_make`
+ 
+ <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/catkinmake.png"/>
+ 
  * `$ source ~/devel/setup.bash`
 Fatto ciò sarà possibile eseguire un file di launch all'interno della workspace attracerso il comando `$ roslaunch <directory_package> <nome_file_launch>`
 
