@@ -11,7 +11,7 @@ Per poter installare ROS+Gazebo, si dovrà avere a disposizione una distribuzion
   * Proponiamo un link alla guida ufficiale di GitHub per l'installazione: [GUIDA INSTALLAZIONE](https://github.com/ethz-asl/rotors_simulator)
   * Proponiamo anche un link (che consigliamo) in cui è presente una OVA per macchina virtuale VirtalBox, in modo da poterla importare ed avere un ambiente di sviluppo già pronto e funzionante: [DOWNLOAD OVA](https://univpm-my.sharepoint.com/:f:/g/personal/s1088279_studenti_univpm_it/EjDqAEOL1WRCgjfu0cDKMvsB2gNqCj9FmYp-Dh4ALNuY8g?e=PsrsZR)
   
-  <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/OVA.png"/>
+  <a href="https://univpm-my.sharepoint.com/personal/s1088279_studenti_univpm_it/_layouts/15/onedrive.aspx?originalPath=aHR0cHM6Ly91bml2cG0tbXkuc2hhcmVwb2ludC5jb20vOmY6L2cvcGVyc29uYWwvczEwODgyNzlfc3R1ZGVudGlfdW5pdnBtX2l0L0VqRHFBRU9MMVdSQ2dqZnUwY0RLTXZzQjJnTnFDajlGbVlwLURoNEFMTnVZOGc%5FcnRpbWU9MGJsMUZTNWEyRWc&id=%2Fpersonal%2Fs1088279%5Fstudenti%5Funivpm%5Fit%2FDocuments%2FProgetto%20Misure%2FRotorS%28Melodic%29%2Eova&parent=%2Fpersonal%2Fs1088279%5Fstudenti%5Funivpm%5Fit%2FDocuments%2FProgetto%20Misure"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/OVA.png"/>
   
 Per poter installare l'OVA sulla propria VirtualBox, seguire i seguenti passi:
   * Installare [VirtualBox](https://www.virtualbox.org/)
