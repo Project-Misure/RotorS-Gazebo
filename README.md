@@ -175,9 +175,15 @@ La finestra di Gazebo deve apparire pressapoco così:
 
 <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_01.png"/>
 
-*N.B. il file di lanch che abbiamo fatto partire è quello presente nella directory ufficiale, in cui sono presenti tutti gli esempi di simulazione, reperibile a [questo link](https://github.com/ethz-asl/rotors_simulator). Tuttavia la directory è stata già scariocata è presente mella macchina virtuale scaricata. Per poterla far partire basta digitare su terminale i seguenti comandi: `$ cd diffDrive_ws` + `$  source devel/setup.bash` + `$ roslaunch rotors_gazebo mav_hovering_example.launch`. Tali file sono presenti nle persorso `/home/diffDrive_ws/src/rotors_simulation/rotors_gazebo/launch`.
+*N.B. il file di lanch che abbiamo fatto partire è quello presente nella directory ufficiale, in cui sono presenti tutti gli esempi di simulazione, reperibile a [questo link](https://github.com/ethz-asl/rotors_simulator). Tuttavia la directory è stata già scariocata è presente mella macchina virtuale scaricata. Per poterla far partire basta digitare su terminale i seguenti comandi: `$ cd diffDrive_ws` + `$  source devel/setup.bash` + `$ roslaunch rotors_gazebo mav_hovering_example.launch`. Tali file sono presenti nle persorso `/home/diffDrive_ws/src/rotors_simulation/rotors_gazebo/launch`.*
 
 Come possiamo vedere sall'immagine nella parte alta abbiamo la barra degli strumenti, in cui è possibile tutte le operazioni grafiche sulla scena rappresentata.
+
+<img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_02.png"/>
+
+I primi 4 sono i tasti posizionali, in cui è possibile muoversi nella mappa, allargare e ruotare. I comandi possono essere impartiti anche da mouse, infatti, con la rotella possiamo effettuare uno zoom sull'inquadratura e il tasto sinistro ci permette di trascinare la visuale. Il tasto con il magnete ci permette di muoverci, trascinando la mappa con il tasto sinistro, facendo ruotare la mappa stessa. I comandi rappresemtati da una sfera un cubo e un cilindro permettono di creare delle figure geometriche tridimensionali sulla mappa. I comandi identificati dal sole o raggi solari permettono di cambiare l'ìlluminazione.
+
+
 
 
 
