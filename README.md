@@ -25,5 +25,11 @@ Le credenziali di accesso alla macchina virtuale sono le seguenti:
  * Username: rotors
  * Password: rotors
  
-
+## Gestione ROS & Gazebo
+Per tutti i dettagli rimandiamo alla guida di [ROS.org](http://wiki.ros.org/)<br>
+ * Gestione Ambiente:
+   * Creazione Workspace: per poter creare la workspace (una directory in cui sono presenti al suo interni i, cosidetti, package di lavoro per Gazebo) basta semplicemente collocarsi in `/home` e crerare una directory (tramite linea di comando: `cd /home` + `mkdir nome_workspace`)
+   * Filesystem:
+      * Package: Organizzazione software (librerie, script ecc...)
+      * Manifest(package.xml): descrizione del package (metadati)
 
