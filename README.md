@@ -183,6 +183,17 @@ Come possiamo vedere sall'immagine nella parte alta abbiamo la barra degli strum
 
 I primi 4 sono i tasti posizionali, in cui è possibile muoversi nella mappa, allargare e ruotare. I comandi possono essere impartiti anche da mouse, infatti, con la rotella possiamo effettuare uno zoom sull'inquadratura e il tasto sinistro ci permette di trascinare la visuale. Il tasto con il magnete ci permette di muoverci, trascinando la mappa con il tasto sinistro, facendo ruotare la mappa stessa. I comandi rappresemtati da una sfera un cubo e un cilindro permettono di creare delle figure geometriche tridimensionali sulla mappa. I comandi identificati dal sole o raggi solari permettono di cambiare l'ìlluminazione.
 
+Nella parte sinistra della finestra vediamo un menu che identifica i vari componenti presenti sulla mappa:
+
+<img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_03.png"/>
+
+CLiccando su un componente è possibile vedere le sotto-componenti di cui è composto. Nel caso del drone aereo, cliccando col tatso destro è possibile vedere un menu a tendina e cliccando su 'follow' sarà possibile seguire i movimenti del drone e dov'è collocato in quel preciso momento.
+
+In basso è presente la timeline della simulazione e all'inizio di questa timeline troviamo il bottone di play/pausa che una volta cliccato congela lo stato della simulazione (se si clicca 'pausa') o la fa riprendere (se si clicca 'play'). Nella simulazione che si è fatta aprtire (mav_hovering_example.launch) viene fatto fluttuare a mezz'aria il drone.
+
+### 5.1. Controllo drone da keyboard
+
+In questo paragrafo vedremo come controllare un drone attraverso i comandi impartiti da tastiera.
 
 
 
