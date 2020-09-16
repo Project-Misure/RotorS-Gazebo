@@ -11,6 +11,8 @@ Per poter installare ROS+Gazebo, si dovrà avere a disposizione una distribuzion
   * Proponiamo un link alla guida ufficiale di GitHub per l'installazione: [GUIDA INSTALLAZIONE](https://github.com/ethz-asl/rotors_simulator)
   * proponiamo anche un link (che consigliamo) in cui è presente una OVA per macchina virtuale VirtalBox, in modo da poterla importare ed avere un ambiente di sviluppo già pronto e funzionante: [DOWNLOAD OVA](https://univpm-my.sharepoint.com/:f:/g/personal/s1088279_studenti_univpm_it/EjDqAEOL1WRCgjfu0cDKMvsB2gNqCj9FmYp-Dh4ALNuY8g?e=PsrsZR)
   
+  <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/OVA.png"/>
+  
 Per poter installare l'OVA sulla propria VirtualBox, seguire i seguenti passi:
   * Aprire VirtualBox
   * `File > Importa Applicazione Virtuale`
@@ -26,6 +28,8 @@ Per poter accedere alla macchina virtuale, una volta installata, cliccare due vo
 Le credenziali di accesso alla macchina virtuale sono le seguenti:
  * Username: rotors
  * Password: rotors
+ 
+ <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/ubuntu.png"/>
  
 ## 3. Gestione ROS & Gazebo
 Per tutti i dettagli rimandiamo alla guida di [ROS.org](http://wiki.ros.org/)<br>
