@@ -84,3 +84,6 @@ Per poter compilare un package bisogna eseguire i seguenti passi:
  * `$ source ~/devel/setup.bash`
 Fatto ciò sarà possibile eseguire un file di launch all'interno della workspace attracerso il comando `$ roslaunch <directory_package> <nome_file_launch>`
 
+## 4. Lancio Del Software
+Per poter lanciare il software e verificare che tutto nella macchina virtuale funzioni correttamente, seguire la seguente guida:
+
