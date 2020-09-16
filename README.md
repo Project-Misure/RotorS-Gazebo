@@ -9,11 +9,12 @@ Versione ROS Melodic<br>
 ## 1. Installazione
 Per poter installare ROS+Gazebo, si dovrà avere a disposizione una distribuzione Ubuntu (consigliamo 18.04 +) su macchina virtuale (es: Virtual Box) o tramite partizione.
   * Proponiamo un link alla guida ufficiale di GitHub per l'installazione: [GUIDA INSTALLAZIONE](https://github.com/ethz-asl/rotors_simulator)
-  * proponiamo anche un link (che consigliamo) in cui è presente una OVA per macchina virtuale VirtalBox, in modo da poterla importare ed avere un ambiente di sviluppo già pronto e funzionante: [DOWNLOAD OVA](https://univpm-my.sharepoint.com/:f:/g/personal/s1088279_studenti_univpm_it/EjDqAEOL1WRCgjfu0cDKMvsB2gNqCj9FmYp-Dh4ALNuY8g?e=PsrsZR)
+  * Proponiamo anche un link (che consigliamo) in cui è presente una OVA per macchina virtuale VirtalBox, in modo da poterla importare ed avere un ambiente di sviluppo già pronto e funzionante: [DOWNLOAD OVA](https://univpm-my.sharepoint.com/:f:/g/personal/s1088279_studenti_univpm_it/EjDqAEOL1WRCgjfu0cDKMvsB2gNqCj9FmYp-Dh4ALNuY8g?e=PsrsZR)
   
   <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/OVA.png"/>
   
 Per poter installare l'OVA sulla propria VirtualBox, seguire i seguenti passi:
+  * Installare [VirtualBox](https://www.virtualbox.org/)
   * Aprire VirtualBox
   * `File > Importa Applicazione Virtuale`
   * Selezionare il file OVA scaricato attraverso la schermata che si aprirà dopo aver cliccato sull'icona della cartella in basso a destra
