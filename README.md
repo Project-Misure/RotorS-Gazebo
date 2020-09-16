@@ -139,6 +139,8 @@ Per poter lanciare il software e verificare che tutto nella macchina virtuale fu
  * `$ source ~/devel/setup.bash`
  * `$ roslaunch prova_gazebo prova.launch` --> partirà GAzebo e ROS con la simulazione di una stazione di servizio.
  
+ <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/GasStation.png"/>
+ 
 Per poter inserire un robot all'interno della scena, basta seguire i seguenti passi:
  * Aprire il file `prova.launch`:
    * `$ sudo nano src/prova_gazebo/launch/prova.launch`
@@ -152,6 +154,8 @@ Per poter inserire un robot all'interno della scena, basta seguire i seguenti pa
 * `$ catkin_make`
 * `$ source ~/devel/setup.bash`
 * `$ roslaunch prova_gazebo prova.launch` --> Si aprirà la stazione di servizio con un robot presente sulla scena.
+
+<img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Gas_baxter.png"/>
 
 
 Il software può essere lanciato con tutte le prove e esempi che si trovano online, allo stesso modo, oppure creando, come nella guida, un file di lancio e uno di mondo che vada a rappresentare quello che si vuole realizzare. I vari modelli che è possibile utilizzare sono presenti al seguente [LINK](http://models.gazebosim.org/)
