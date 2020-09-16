@@ -211,7 +211,7 @@ Per poter far partire una simulazione con drone controllabile da tastiera, segui
     
     <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_05.png"/>
     
-    *N.B. Potrebbe capitare che durante l'avvio del programma risulti un errore di questo tipo: *
+    *N.B. Potrebbe capitare che durante l'avvio del programma risulti un errore di questo tipo:*
     <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_04.png"/>
     
     *E il controller della tastiera non verrà fuori. Per rislvere ciò eseguire questi comandi da terminale:*
