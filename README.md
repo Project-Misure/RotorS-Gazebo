@@ -191,9 +191,11 @@ CLiccando su un componente è possibile vedere le sotto-componenti di cui è com
 
 In basso è presente la timeline della simulazione e all'inizio di questa timeline troviamo il bottone di play/pausa che una volta cliccato congela lo stato della simulazione (se si clicca 'pausa') o la fa riprendere (se si clicca 'play'). Nella simulazione che si è fatta aprtire (mav_hovering_example.launch) viene fatto fluttuare a mezz'aria il drone.
 
-### 5.1. Controllo drone da keyboard
+### 5.1. Controllo drone da tastiera
 
 In questo paragrafo vedremo come controllare un drone attraverso i comandi impartiti da tastiera.
+
+*N.B. Nella macchina virtuale scaricata saranno già presente tutti i pacchetti per permettere di controllare un drone. In altri casi bisogna seguire la guida presente in [questo link](https://github.com/ethz-asl/rotors_simulator/wiki/Setup-virtual-keyboard-joystick)
 
 
 
