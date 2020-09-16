@@ -37,12 +37,15 @@ Per tutti i dettagli rimandiamo alla guida di [ROS.org](http://wiki.ros.org/)<br
       * Manifest(package.xml): descrizione del package (metadati)
  
 ### 3.1. Package
-*Directory Tree*:<br>
+
+#### 3.1.1. Directory Tree
+
 -> my-package/<br>
 ---> CMakeList.txt(file testo standard)<br>
 ---> package.xml<br>
 
-*Directory Tree MultiPackage*:<br>
+#### 3.1.2. Directory Tree MultiPackage
+
 -> workspace/<br>
 ---> src/<br>
 -----> package_1/<br>
@@ -52,8 +55,9 @@ Per tutti i dettagli rimandiamo alla guida di [ROS.org](http://wiki.ros.org/)<br
 --------> CMakeList.txt<br>
 --------> package.xml<br>
 
-*Creare un package*:<br>
-Daterminale:
+#### 3.1.3. Creare un package
+
+Da terminale:
  * `cd ~/workspace/src`
  * `catkin_create_pkg nome_package`
   * comando generale: `catkin_create_pkg <name> [dep1] [dep2] [dep3]`
@@ -64,7 +68,7 @@ Le due directory create ospiteranno la struttura dell'intero simulatore.
 All'interno di `launch` verranno creati e/o posizionati i file `.launch` in cui al loro interno hanno hanno una serie di tag che vanno a identificare il mondo virtuale, il robot e tutte le caratteristiche da implementare in un mondo virtuale (vedremo launch nel dettaglio dopo).
 All'interno di `worlds` verranno creati e/o posizionati i file `.world` in cui al loro intewrno hanno una serie di tag che vanno a identificare, in modo specifico, un mondo e le sue caratterisriche (esempio: una casa, un ambiente vuoto, una cava ecc...).
 
-#### 3.1.1. Package.xml
+#### 3.1.4. Package.xml
  * description tags: `<description> ... </description>` --> Tag per la descrizione del package
  * maintainer tags: `<mainteiner> ... </maintenìiner>` ---> Tag per immettere i contatti dello sviluppatore del package
  * license tags: `<license> ... </license>` ---> Tag immettere le license e le versioni del software che si sta realizzando
@@ -74,4 +78,4 @@ All'interno di `worlds` verranno creati e/o posizionati i file `.world` in cui a
    * `<run_depend> ... <run_depend>`
    * `<test_depend> ... <test_depend>`
    
-#### 3.1.2. Compilare un Package
+#### 3.1.5. Compilare un Package
