@@ -131,7 +131,7 @@ Per poter lanciare il software e verificare che tutto nella macchina virtuale fu
             </world>
           </sdf>
           
-     *N.B. Si potrà inserire al suo interno tutte le componenti che si vogliono, chiamate 'model'. In questa piccola porzione di mondo troviamo un terreno, un sole(luminosità radiale) e una stazione di benzina (che potrà essere reperibile insieme a tantissime altre strutture e oggetti all'interno del database online di Gazebo.
+     *N.B. Si potrà inserire al suo interno tutte le componenti che si vogliono, chiamate 'model'. In questa piccola porzione di mondo troviamo un terreno, un sole(luminosità radiale) e una stazione di benzina (che potrà essere reperibile insieme a tantissime altre strutture e oggetti all'interno del database online di Gazebo. Esempio: al posto di gas_statio è possibile mettere empty o qualsiasi altro modello di mondo presente a [Questo Link](http://models.gazebosim.org/)*
      
  * `$ cd .. `
  * `$ cd ..`
