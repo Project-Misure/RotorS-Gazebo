@@ -30,7 +30,7 @@ Le credenziali di accesso alla macchina virtuale sono le seguenti:
 ## 3. Gestione ROS & Gazebo
 Per tutti i dettagli rimandiamo alla guida di [ROS.org](http://wiki.ros.org/)<br>
  * Gestione Ambiente:
-   * Creazione Workspace: per poter creare la workspace (una directory in cui sono presenti al suo interni i, cosidetti, package di lavoro per Gazebo) basta semplicemente collocarsi in `/home` e crerare una directory (tramite linea di comando: `cd /home` + `mkdir nome_workspace`)
+   * Creazione Workspace: per poter creare la workspace (una directory in cui sono presenti al suo interni i, cosidetti, package di lavoro per Gazebo) basta semplicemente collocarsi in `/home` e crerare una directory (tramite linea di comando: `$ cd /home` + `$ mkdir nome_workspace`)
    * Filesystem:
       * Package: Organizzazione software (librerie, script ecc...)
       * Manifest(package.xml): descrizione del package (metadati)
@@ -86,4 +86,69 @@ Fatto ciò sarà possibile eseguire un file di launch all'interno della workspac
 
 ## 4. Lancio Del Software
 Per poter lanciare il software e verificare che tutto nella macchina virtuale funzioni correttamente, seguire la seguente guida:
+ * Aprire il terminale
+ * `$ cd /home` se non si è già collocati al suo interno
+ * `$ mkdir workspace_catkin`
+ * `$ cd workspace_catkin`
+ * `$ mkdir src`
+ * `$ cd src/`
+ * `$ catkin_create_pkg prova_gazebo` a 'prova_gazebo' può essere messo qualsiasi nome si voglia, per semplicità facciamo questo esempio.
+ * `$ cd prova_gazebo`
+ * `$ mkdir launch | mkdir worlds`
+ * `$ cd launch`
+ * `$ sudo nano prova.launch`
+ * Si aprirà un editor di file e al suo interno copiamo e incolliamo quanto segue:
+ 
+               <launch>
+               <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+               <include file="$(find gazebo_ros)/launch/empty_world.launch">
+                 <arg name="world_name" value="$(find prova_gazebo)/worlds/prova.world"/>
+                 <!-- more default parameters can be changed here -->
+               </include>
+               </launch>`
 
+     *N.B. Per i prossimi file che si creeranno, basta sostituire all'interno dei tag la parola 'prova_gazebo' e 'prova.world' con il path e il file world che si vuole utilizzare*
+     
+ * `$ cd ..`
+ * `$ cd worlds`
+ * `$ sudo nano prova.world`
+ * Si aprirà un editor e si dovrà inserire quanrto segue:
+ 
+          <?xml version="1.0" ?>
+          <sdf version="1.4">
+            <world name="default">
+              <include>
+                <uri>model://ground_plane</uri>
+              </include>
+              <include>
+                <uri>model://sun</uri>
+              </include>
+              <include>
+                <uri>model://gas_station</uri>
+                <name>gas_station</name>
+                <pose>-2.0 7.0 0 0 0 0</pose>
+              </include>
+            </world>
+          </sdf>
+          
+     *N.B. Si potrà inserire al suo interno tutte le componenti che si vogliono, chiamate 'model'. In questa piccola porzione di mondo troviamo un terreno, un sole(luminosità radiale) e una stazione di benzina (che potrà essere reperibile insieme a tantissime altre strutture e oggetti all'interno del database online di Gazebo.
+     
+ * `$ cd .. `
+ * `$ cd ..`
+ * `$ catkin_make`
+ * `$ source ~/devel/setup.bash`
+ * `$ roslaunch prova_gazebo prova.launch` --> partirà GAzebo e ROS con la simulazione di una stazione di servizio.
+ 
+Per poter inserire un robot all'interno della scena, basta seguire i seguenti passi:
+ * Aprire il file `prova.launch`:
+   * `$ sudo nano src/prova_gazebo/launch/prova.launch`
+ * Inserire quanto segue, prima del `</launch>`:
+ 
+       <!-- Spawn a robot into Gazebo -->
+       <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find baxter_description)/urdf/baxter.urdf -urdf -z 1 -model baxter" />
+       
+  *N.B. Se si sta eseguendo l'OVA, non si avranno problemi, in altri casi bisogna installare il pacchetto aggiuntivo del roboto attraverso il comando `$ git clone https://github.com/RethinkRobotics/baxter_common.git` e ricompilare la workspace con `$ catkin_make`.
+  
+* `$ catkin_make`
+* `$ source ~/devel/setup.bash`
+* `$ roslaunch prova_gazebo prova.launch` --> Si aprirà la stazione di servizio con un robot presente sulla scena.
