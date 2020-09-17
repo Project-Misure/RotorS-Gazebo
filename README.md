@@ -298,6 +298,18 @@ Si apriranno due schermate: una di Gazebo, con il drone di terra e l'altra con l
 <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_06.png"/>
 
 
+La cosa è disponibile anche se dovessimo far partire RVIZ, un software di gestione, noteremo che la camera sta guardando qualcosa e ci arrivano le immagini in tempo reale. 
+
+    $ source mybot_ws/devel/setup.bash
+    $ roslaunch mybot_description mybot_rviz.launch
+    
+<img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_07.png"/>
+
+Se non lo si visualizza, provare a cliccare su 'Add' e aggiungere 'Image'. Aprire 'Image' sul menu sinistro e su 'Image Topic' cliccare sul box a destra e cliccare su quello che uscirà dal menu a tendina (verrà visualizzato solamnete la camera collegata al drone di Gazebo).
+
+
+
+
 
 
 
