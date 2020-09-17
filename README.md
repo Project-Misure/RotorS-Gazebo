@@ -224,6 +224,47 @@ Per poter far partire una simulazione con drone controllabile da tastiera, segui
   * Sarà possibile controllare il drone dopo aver cliccato play
   * I controlli si focalizzano su 8 tasti principali: W, A, S, D, ↓, ↑, →, ←.
   * I controlli sono estremamente sensibili e bisogna prendere esperienza
+  
+ ### 5.2. Utilizzo Plugin
+ Per poter utilizzare un plugin, in ROS+Gazebo, ricorriamo allòa guida ufficiale e facciamo un esempio pratico.
+ I plugin Gazebo offrono ai tuoi modelli URDF(Unified Robotic Description Format), ovvero i file che descrivono un determinato robot o drone che deve essere utilizzato, maggiori funzionalità e possono collegare messaggi ROS e chiamate di servizio per l'uscita del sensore e l'ingresso del motore.
+ 
+In breve, il plugin è inserito all'interno dell'URDF attraverso la tag `<gazebo>`:
+
+      <robot>
+        ... robot description ...
+        <gazebo>
+          <plugin name="differential_drive_controller" filename="libdiffdrive_plugin.so">
+            ... plugin parameters ...
+          </plugin>
+        </gazebo>
+        ... robot description ...
+      </robot>
+      
+La specifica dei plug-in del sensore è leggermente diversa; i sensori in Gazebo sono pensati per essere collegati ai `<plugin>`, quindi la tag `<gazebo>`che descrive quel sensore deve essere un riferimento a quel collegamento. Per esempio: 
+
+     <robot>
+       ... robot description ...
+       <link name="sensor_link">
+         ... link description ...
+       </link>
+
+       <gazebo reference="sensor_link">
+         <sensor type="camera" name="camera1">
+           ... sensor parameters ...
+           <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+             ... plugin parameters ..
+           </plugin>
+         </sensor>
+       </gazebo>
+
+     </robot>
+     
+     
+Parlato in generale di quelli che sono i plugin forniti da Gazebo, vediamo un plugin utilizzato in questo ambito, ovvero la videocamera o semplicemente camera.
+
+#### 5.2.1. Camera
+
 
 
 _________________________________________________________________________________________
