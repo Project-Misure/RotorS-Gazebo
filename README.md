@@ -1,12 +1,23 @@
 # ROS-Gazebo
 Software di simulazione per droni: <br>
-Versione GAZEBO 7.0<br>
+Versione GAZEBO 9.0<br>
 Versione ROS Melodic<br>
+
+# Indice
+* <a href="#install">Installazione</a>
+* <a href="#gest-mac">Gestione Macchina Virtuale</a>
+* <a href="#gest-ros">Gestione ROS&Gazebo</a>
+  * <a href="#gest-ros-pac">Package</a>
+* <a href="#run">Lancio Programma</a>
+* <a href="#command">Uso e Comandi di Gazebo</a>
+  * <a href="#control">Controllo Drone da Tastiera</a>
+  * <a href="#plugin">Utilizzo Plugin</a>
+    * <a href="#camera">Camera</a>
 
 
 # Guida passo-passo
 
-## 1. Installazione
+## <a name="install"/></a> 1. Installazione
 Per poter installare ROS+Gazebo, si dovrà avere a disposizione una distribuzione Ubuntu (consigliamo 18.04 +) su macchina virtuale (es: Virtual Box) o tramite partizione.
   * Proponiamo un link alla guida ufficiale di GitHub per l'installazione: [GUIDA INSTALLAZIONE](https://github.com/ethz-asl/rotors_simulator)
   * Proponiamo anche un link (che consigliamo) in cui è presente una OVA per macchina virtuale VirtalBox, in modo da poterla importare ed avere un ambiente di sviluppo già pronto e funzionante: [DOWNLOAD OVA](https://univpm-my.sharepoint.com/:f:/g/personal/s1088279_studenti_univpm_it/EjDqAEOL1WRCgjfu0cDKMvsB2gNqCj9FmYp-Dh4ALNuY8g?e=PsrsZR)
@@ -24,7 +35,7 @@ Per poter installare l'OVA sulla propria VirtualBox, seguire i seguenti passi:
   
 *N.B. Per poter lavorare in piena serenità, consigliamo di avere un PC con almeno 8 GB di RAM e almeno 25 GB di spazio libero su disco. Istallando il software su una distribuzione Linux, da zero, porterà ad avere una serie di problemi che possono esssere risolti solamente se si conosce l'ambiente di sviluppo, pertanto sconsigliamo di farlo e di seguire l'installazione dell'OVA*
 
-## 2. Gestione Macchina Virtuale
+## <a name="gest-mac"/></a> 2. Gestione Macchina Virtuale
 Per poter accedere alla macchina virtuale, una volta installata, cliccare due volte sull'icona rappresentativa (RotorS(Melodic))<br>
 Le credenziali di accesso alla macchina virtuale sono le seguenti:
  * Username: rotors
@@ -32,7 +43,7 @@ Le credenziali di accesso alla macchina virtuale sono le seguenti:
  
  <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/ubuntu.png"/>
  
-## 3. Gestione ROS & Gazebo
+## <a name="gest-ros"/></a> 3. Gestione ROS & Gazebo
 Per tutti i dettagli rimandiamo alla guida di [ROS.org](http://wiki.ros.org/)<br>
  * Gestione Ambiente:
    * Creazione Workspace: per poter creare la workspace (una directory in cui sono presenti al suo interni i, cosidetti, package di lavoro per Gazebo) basta semplicemente collocarsi in `/home` e crerare una directory (tramite linea di comando: `$ cd /home` + `$ mkdir nome_workspace`)
@@ -40,15 +51,15 @@ Per tutti i dettagli rimandiamo alla guida di [ROS.org](http://wiki.ros.org/)<br
       * Package: Organizzazione software (librerie, script ecc...)
       * Manifest(package.xml): descrizione del package (metadati)
  
-### 3.1. Package
+### <a name="gest-ros-pac"/></a> 3.1. Package
 
-#### 3.1.1. Directory Tree
+#### <a name="gest-ros-pac-dir"/></a> 3.1.1. Directory Tree
 
      my-package/
        CMakeList.txt(file testo standard)
        package.xml
 
-#### 3.1.2. Directory Tree MultiPackage
+#### <a name="gest-ros-pac-dir2"/></a> 3.1.2. Directory Tree MultiPackage
 
     workspace/
      src/
@@ -59,7 +70,7 @@ Per tutti i dettagli rimandiamo alla guida di [ROS.org](http://wiki.ros.org/)<br
         CMakeList.txt
         package.xml
 
-#### 3.1.3. Creare un package
+#### <a name="gest-ros-pac-make"/></a> 3.1.3. Creare un package
 
 Da terminale:
  * `$ cd ~/workspace/src`
@@ -72,7 +83,7 @@ Le due directory create ospiteranno la struttura dell'intero simulatore.
 All'interno di `launch` verranno creati e/o posizionati i file `.launch` in cui al loro interno hanno una serie di tag che vanno a identificare il mondo virtuale, il robot e tutte le caratteristiche da implementare in un mondo virtuale (vedremo launch nel dettaglio dopo).
 All'interno di `worlds` verranno creati e/o posizionati i file `.world` in cui al loro intewrno hanno una serie di tag che vanno a identificare, in modo specifico, un mondo e le sue caratterisriche (esempio: una casa, un ambiente vuoto, una cava ecc...).
 
-#### 3.1.4. Package.xml
+#### <a name="gest-ros-pac-pac"/></a> 3.1.4. Package.xml
  * description tags: `<description> ... </description>` --> Tag per la descrizione del package
  * maintainer tags: `<mainteiner> ... </maintenìiner>` ---> Tag per immettere i contatti dello sviluppatore del package
  * license tags: `<license> ... </license>` ---> Tag immettere le license e le versioni del software che si sta realizzando
@@ -92,7 +103,7 @@ Per poter compilare un package bisogna eseguire i seguenti passi:
  * `$ source ~/devel/setup.bash`
 Fatto ciò sarà possibile eseguire un file di launch all'interno della workspace attracerso il comando `$ roslaunch <directory_package> <nome_file_launch>`
 
-## 4. Lancio Del Software
+## <a name="run"/></a> 4. Lancio Del Software
 Per poter lanciare il software e verificare che tutto nella macchina virtuale funzioni correttamente, seguire la seguente guida:
  * Aprire il terminale
  
@@ -172,7 +183,7 @@ Per poter inserire un robot all'interno della scena, basta seguire i seguenti pa
 Il software può essere lanciato con tutte le prove e esempi che si trovano online, allo stesso modo, oppure creando, come nella guida, un file di lancio e uno di mondo che vada a rappresentare quello che si vuole realizzare. I vari modelli che è possibile utilizzare sono presenti al seguente [LINK](http://models.gazebosim.org/)
 
 
-## 5. Uso & Comandi di Gazebo
+## <a name="command"/></a> 5. Uso & Comandi di Gazebo
 Una volta fatto partire un package, verrà aperta una finestra di Gazebo con il mondo virtuale che abbiamo creto o che abbiamo importato.
 La finestra di Gazebo deve apparire pressapoco così:
 
@@ -194,7 +205,7 @@ Cliccando su un componente è possibile vedere le sotto-componenti di cui è com
 
 In basso è presente la timeline della simulazione e all'inizio di questa timeline troviamo il bottone di play/pausa che una volta cliccato congela lo stato della simulazione (se si clicca 'pausa') o la fa avanzare nel tempo (se si clicca 'play'). Nella simulazione che si è fatta partire (mav_hovering_example.launch) viene fatto fluttuare a mezz'aria il drone attraverso le caratteristiche di odometria.
 
-### 5.1. Controllo drone da tastiera
+### <a name="control"/></a> 5.1. Controllo drone da tastiera
 
 In questo paragrafo vedremo come controllare un drone attraverso i comandi impartiti da tastiera.
 
@@ -225,7 +236,7 @@ Per poter far partire una simulazione con drone controllabile da tastiera, segui
   * I controlli si focalizzano su 8 tasti principali: W, A, S, D, ↓, ↑, →, ←.
   * I controlli sono estremamente sensibili e bisogna prendere esperienza
   
- ### 5.2. Utilizzo Plugin
+ ### <a name="plugin"/></a> 5.2. Utilizzo Plugin
  Per poter utilizzare un plugin, in ROS+Gazebo, ricorriamo allòa guida ufficiale e facciamo un esempio pratico.
  I plugin Gazebo offrono ai tuoi modelli URDF(Unified Robotic Description Format), ovvero i file che descrivono un determinato robot o drone che deve essere utilizzato, maggiori funzionalità e possono collegare messaggi ROS e chiamate di servizio per l'uscita del sensore e l'ingresso del motore.
  
@@ -263,7 +274,7 @@ La specifica dei plug-in del sensore è leggermente diversa; i sensori in Gazebo
      
 Parlato in generale di quelli che sono i plugin forniti da Gazebo, vediamo un plugin utilizzato in questo ambito, ovvero la videocamera o semplicemente camera.
 
-#### 5.2.1. Camera
+#### <a name="camera"/></a> 5.2.1. Camera
 Formniamo, prima di tutto un esempio, che utilizza la camera e poi lo andremo a strutturare nel dettaglio spiegando le caratteristiche.
 Per poter utilizzare una workspace già pronta all'utilizzo e testarne l'uso, apriamo il terminale e seguimo i seguenti passi:
 
