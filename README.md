@@ -64,12 +64,12 @@ Per tutti i dettagli rimandiamo alla guida di [ROS.org](http://wiki.ros.org/)<br
 Da terminale:
  * `$ cd ~/workspace/src`
  * `$ catkin_create_pkg nome_package`
-  * comando generale: `$ catkin_create_pkg <name> [dep1] [dep2] [dep3]`
+  * comando generale: `$ catkin_create_pkg <name> [dep1] [dep2] [dep3]`<br>
 Una volta create il package sarà possibile inserire all'interno le directory che andranno a strutturare il progetto.
  * `$ cd nome_package`
  * `$ mkdir launch | mkdir worlds`
 Le due directory create ospiteranno la struttura dell'intero simulatore.
-All'interno di `launch` verranno creati e/o posizionati i file `.launch` in cui al loro interno hanno hanno una serie di tag che vanno a identificare il mondo virtuale, il robot e tutte le caratteristiche da implementare in un mondo virtuale (vedremo launch nel dettaglio dopo).
+All'interno di `launch` verranno creati e/o posizionati i file `.launch` in cui al loro interno hanno una serie di tag che vanno a identificare il mondo virtuale, il robot e tutte le caratteristiche da implementare in un mondo virtuale (vedremo launch nel dettaglio dopo).
 All'interno di `worlds` verranno creati e/o posizionati i file `.world` in cui al loro intewrno hanno una serie di tag che vanno a identificare, in modo specifico, un mondo e le sue caratterisriche (esempio: una casa, un ambiente vuoto, una cava ecc...).
 
 #### 3.1.4. Package.xml
