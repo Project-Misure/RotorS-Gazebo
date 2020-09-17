@@ -178,27 +178,27 @@ La finestra di Gazebo deve apparire pressapoco così:
 
 <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_01.png"/>
 
-*N.B. il file di lanch che abbiamo fatto partire è quello presente nella directory ufficiale, in cui sono presenti tutti gli esempi di simulazione, reperibile a [questo link](https://github.com/ethz-asl/rotors_simulator). Tuttavia la directory è stata già scariocata è presente mella macchina virtuale scaricata. Per poterla far partire basta digitare su terminale i seguenti comandi: `$ cd diffDrive_ws` + `$  source devel/setup.bash` + `$ roslaunch rotors_gazebo mav_hovering_example.launch`. Tali file sono presenti nle persorso `/home/diffDrive_ws/src/rotors_simulation/rotors_gazebo/launch`.*
+*N.B. il file di lanch che abbiamo fatto partire è quello presente nella directory ufficiale, in cui sono presenti tutti gli esempi di simulazione, reperibile a [questo link](https://github.com/ethz-asl/rotors_simulator). Tuttavia la directory è già presente mella macchina virtuale scaricata. Per poterla far partire basta digitare su terminale i seguenti comandi: `$ cd diffDrive_ws` + `$  source devel/setup.bash` + `$ roslaunch rotors_gazebo mav_hovering_example.launch`. Tali file sono presenti nle persorso `/home/diffDrive_ws/src/rotors_simulation/rotors_gazebo/launch`.*
 
-Come possiamo vedere sall'immagine nella parte alta abbiamo la barra degli strumenti, in cui è possibile tutte le operazioni grafiche sulla scena rappresentata.
+Come possiamo vedere dall'immagine nella parte alta abbiamo la barra degli strumenti, in cui è possibile vedere tutte le operazioni grafiche sulla scena rappresentata.
 
 <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_02.png"/>
 
-I primi 4 sono i tasti posizionali, in cui è possibile muoversi nella mappa, allargare e ruotare. I comandi possono essere impartiti anche da mouse, infatti, con la rotella possiamo effettuare uno zoom sull'inquadratura e il tasto sinistro ci permette di trascinare la visuale. Il tasto con il magnete ci permette di muoverci, trascinando la mappa con il tasto sinistro, facendo ruotare la mappa stessa. I comandi rappresemtati da una sfera un cubo e un cilindro permettono di creare delle figure geometriche tridimensionali sulla mappa. I comandi identificati dal sole o raggi solari permettono di cambiare l'ìlluminazione.
+I primi 4 sono i tasti posizionali, in cui è possibile muoversi nella mappa, allargare e ruotare. I comandi possono essere impartiti anche da mouse, infatti, con la rotella possiamo effettuare uno zoom sull'inquadratura e il tasto sinistro ci permette di trascinare la visuale. Il tasto con il magnete ci permette di muoverci, trascinando la mappa con il tasto sinistro, facendo ruotare la mappa stessa. I comandi rappresentati da una sfera, un cubo e un cilindro permettono di creare delle figure geometriche tridimensionali sulla mappa. I comandi identificati dal sole o raggi solari permettono di cambiare l'ìlluminazione.
 
 Nella parte sinistra della finestra vediamo un menu che identifica i vari componenti presenti sulla mappa:
 
 <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_03.png"/>
 
-CLiccando su un componente è possibile vedere le sotto-componenti di cui è composto. Nel caso del drone aereo, cliccando col tatso destro è possibile vedere un menu a tendina e cliccando su 'follow' sarà possibile seguire i movimenti del drone e dov'è collocato in quel preciso momento.
+Cliccando su un componente è possibile vedere le sotto-componenti di cui è composto. Nel caso del drone aereo, cliccando col tatso destro è possibile vedere un menu a tendina e cliccando su 'follow' sarà possibile seguire i movimenti del drone e dov'è collocato in quel preciso momento.
 
-In basso è presente la timeline della simulazione e all'inizio di questa timeline troviamo il bottone di play/pausa che una volta cliccato congela lo stato della simulazione (se si clicca 'pausa') o la fa riprendere (se si clicca 'play'). Nella simulazione che si è fatta aprtire (mav_hovering_example.launch) viene fatto fluttuare a mezz'aria il drone.
+In basso è presente la timeline della simulazione e all'inizio di questa timeline troviamo il bottone di play/pausa che una volta cliccato congela lo stato della simulazione (se si clicca 'pausa') o la fa avanzare nel tempo (se si clicca 'play'). Nella simulazione che si è fatta partire (mav_hovering_example.launch) viene fatto fluttuare a mezz'aria il drone attraverso le caratteristiche di odometria.
 
 ### 5.1. Controllo drone da tastiera
 
 In questo paragrafo vedremo come controllare un drone attraverso i comandi impartiti da tastiera.
 
-*N.B. Nella macchina virtuale scaricata saranno già presente tutti i pacchetti per permettere di controllare un drone. In altri casi bisogna seguire la guida presente in [questo link](https://github.com/ethz-asl/rotors_simulator/wiki/Setup-virtual-keyboard-joystick)
+*N.B. Nella macchina virtuale scaricata saranno già presente tutti i pacchetti per permettere di controllare un drone. In altri casi bisogna seguire la guida presente a [questo link](https://github.com/ethz-asl/rotors_simulator/wiki/Setup-virtual-keyboard-joystick)*
 
 Per poter far partire una simulazione con drone controllabile da tastiera, seguire questi passi:
  * Aprire il terminale
@@ -207,7 +207,7 @@ Per poter far partire una simulazione con drone controllabile da tastiera, segui
          $ source devel/setup.bash
          $ roslaunch rotors_gazebo mav_with_keyboard.launch mav_name:=firefly world_name:=basic
          
-    Verrà fatto partire un simulatore con un lettore di comandi attraverso pygame (un plagin di python).
+    Verrà fatto partire un simulatore con un lettore di comandi attraverso pygame (un plag-in di python).
     
     <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_05.png"/>
     
