@@ -264,6 +264,43 @@ La specifica dei plug-in del sensore è leggermente diversa; i sensori in Gazebo
 Parlato in generale di quelli che sono i plugin forniti da Gazebo, vediamo un plugin utilizzato in questo ambito, ovvero la videocamera o semplicemente camera.
 
 #### 5.2.1. Camera
+Formniamo, prima di tutto un esempio, che utilizza la camera e poi lo andremo a strutturare nel dettaglio spiegando le caratteristiche.
+Per poter utilizzare una workspace già pronta all'utilizzo e testarne l'uso, apriamo il terminale e seguimo i seguenti passi:
+
+          $ cd /home
+          $ git clone https://github.com/richardw05/mybot_ws
+          $ cd mybot_ws
+          
+Questa sarà la nuova workspace in cui, al suo interno, è pressente una serie di package su cui prendere spunto per i lavori di utilizzo camera futuri.
+
+          $ catkin_make
+          $ ls
+          
+Noteremo la comparsa di nuove directory, tra cui `/devel` e `/logs` per citarne due.
+
+          $ source devel/setup.bash
+          
+La workspace è pronta e quindi sarà possibile far partire i file di lancio presenti all'interno della directory `/mybot_ws/src/<dir_scelta>/launch`.
+
+Proviamo un esempio di lancio:
+
+     $ roslaunch mybot_gazebo mybot_world.launch
+     
+*N.B. se premiamo il tasto TAB quando si esegue una chiamata, ci verrà in aiuto per la compilazione automatica del nome del file di tipo `.launch`*
+
+Aprire un altro terminale e digitare:
+
+     $ source mybot_ws/devel/setup.bash
+     $ rosrun image_view image_view image: = /mybot/camera1/image_raw
+     
+Si apriranno due schermate: una di Gazebo, con il drone di terra e l'altra con la visuale del drone. Se mettiamo un ostacolo davanti al drone, ad esempio una sfera o una figura tridimensionale, questa apparirà anche nell'inquadratura della camera, in realtime.
+
+<img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_06.png"/>
+
+
+
+
+
 
 
 
