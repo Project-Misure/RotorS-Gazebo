@@ -160,7 +160,7 @@ Per poter inserire un robot all'interno della scena, basta seguire i seguenti pa
        <!-- Spawn a robot into Gazebo -->
        <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find baxter_description)/urdf/baxter.urdf -urdf -z 1 -model baxter" />
        
-  *N.B. Se si sta eseguendo l'OVA, non si avranno problemi, in altri casi bisogna installare il pacchetto aggiuntivo del roboto attraverso il comando `$ git clone https://github.com/RethinkRobotics/baxter_common.git` e ricompilare la workspace con `$ catkin_make`.
+  *N.B. Se si sta eseguendo l'OVA, non si avranno problemi, in altri casi bisogna installare il pacchetto aggiuntivo del roboto attraverso il comando `$ git clone https://github.com/RethinkRobotics/baxter_common.git` e ricompilare la workspace con `$ catkin_make`.*
   
      $ catkin_make
      $ source ~/devel/setup.bash
