@@ -275,8 +275,8 @@ La specifica dei plug-in del sensore è leggermente diversa; i sensori in Gazebo
 Parlato in generale di quelli che sono i plugin forniti da Gazebo, vediamo un plugin utilizzato in questo ambito, ovvero la videocamera o semplicemente camera.
 
 #### <a name="camera"/></a> 5.2.1. Camera
-Formniamo, prima di tutto un esempio, che utilizza la camera e poi lo andremo a strutturare nel dettaglio spiegando le caratteristiche.
-Per poter utilizzare una workspace già pronta all'utilizzo e testarne l'uso, apriamo il terminale e seguimo i seguenti passi:
+Esponiamo, prima di tutto un esempio, che utilizza la camera e poi andremo a strutturare nel dettaglio il plugin spiegando le sue caratteristiche.
+Per utilizzare una workspace già pronta e poterne testarne l'uso della camera, apriamo il terminale e seguimo i seguenti passi:
 
           $ cd /home
           $ git clone https://github.com/richardw05/mybot_ws
@@ -304,22 +304,26 @@ Aprire un altro terminale e digitare:
      $ source mybot_ws/devel/setup.bash
      $ rosrun image_view image_view image: = /mybot/camera1/image_raw
      
-Si apriranno due schermate: una di Gazebo, con il drone di terra e l'altra con la visuale del drone. Se mettiamo un ostacolo davanti al drone, ad esempio una sfera o una figura tridimensionale, questa apparirà anche nell'inquadratura della camera, in realtime.
+Si apriranno due schermate: 
+ * Gazebo, con il drone di terra e l'ambiente virtuale
+ * La finestra di visuale del drone
+ 
+Se dovessimo mettiamo un ostacolo davanti al drone, ad esempio una sfera o una figura tridimensionale, questa apparirà anche nell'inquadratura della camera in tempo reale.
 
 <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_06.png"/>
 
 
-La cosa è disponibile anche se dovessimo far partire RVIZ, un software di gestione, noteremo che la camera sta guardando qualcosa e ci arrivano le immagini in tempo reale. 
+La visuale è disponibile anche facendo partire RVIZ (un software di gestione) e noteremo che la camera invia delle immagini che vengono visualizzate in tempo reale. 
 
     $ source mybot_ws/devel/setup.bash
     $ roslaunch mybot_description mybot_rviz.launch
     
 <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_07.png"/>
 
-Se non lo si visualizza, provare a cliccare su 'Add' e aggiungere 'Image'. Aprire 'Image' sul menu sinistro e su 'Image Topic' cliccare sul box a destra e cliccare su quello che uscirà dal menu a tendina (verrà visualizzato solamnete la camera collegata al drone di Gazebo).
+Se non lo si visualizza, provare a cliccare su *Add*, aggiungere *Image*. Aprire *Image* sul menu sinistro e su *Image Topic* cliccare sul box a destra e cliccare sul percorso che uscirà dal menu a tendina (verrà visualizzato solamnete la camera collegata al drone di Gazebo).
 
 
-Il codice incorporato nel file `.launch`, in modod da attivare la camera e visualizzare il contenuto è il seguente:
+Il codice incorporato nel file `.launch`, in modo da attivare la camera e visualizzare il contenuto è il seguente:
 
      <link name="camera">
         <collision>
@@ -353,7 +357,7 @@ Il codice incorporato nel file `.launch`, in modod da attivare la camera e visua
       </joint>
       
       
-Importare tale codice nel file del drone `.xacro` e nel file del drone `.gazebo` importare il seguente:
+Importare tale codice nel file del drone `.xacro`, mentre nel file del drone con estensione `.gazebo` importare il seguente codice:
 
      <gazebo reference="camera">
          <material>Gazebo/Green</material>
@@ -390,11 +394,7 @@ Importare tale codice nel file del drone `.xacro` e nel file del drone `.gazebo`
 
 Tali codici attivano l'uso della camera su un qualsiasi drone. 
 
-*N.B. Per droni aerei o di forma differente alcune dei dati dovrà essere modificato per essere adattato al robot stesso.*
-
-
-
-
+*N.B. Per droni aerei, o di forma differente, alcuni dei dati dovranno essere modificati per poter essere adattati al robot stesso. Nell'esempio si parla di un drone di terra molto semplice, con due ruote e una scocca a forma di parallelepipedo*
 
 
 _________________________________________________________________________________________
