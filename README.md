@@ -15,6 +15,7 @@ Versione ROS Melodic<br>
     * <a href="#control-joy">Joypad</a>
   * <a href="#plugin">Utilizzo Plugin</a>
     * <a href="#camera">Camera</a>
+* <a href="#output">Output</a>
 
 
 # Guida passo-passo
@@ -412,6 +413,49 @@ Tali codici attivano l'uso della camera su un qualsiasi drone.
 *N.B. Per droni aerei, o di forma differente, alcuni dei dati dovranno essere modificati per poter essere adattati al robot stesso. Nell'esempio si parla di un drone di terra molto semplice, con due ruote e una scocca a forma di parallelepipedo*
 
 
+## <a name="output"/></a> 6. Output
+
+In questa sezione vedremo come visualizzare i dati dei sensori (o semplicemente *Topic*) che possono essere utilizzati in ROS+Gazebo durante l'esecuzione di un package.
+
+Per prima cosa diciamo che un topic è una funzionalità di un paticolare drone che viene implementata durante la sua creazione, sarà possibile andare a modificare tale topic passando valori, visulizzarli a schermo e ottenere tutte le informazioni necessarie.
+
+Una volta che un package è in esecuzione, aprendo un altro terminale possiamo vedere quali soni i topic disponibili di quel particolare drone attraverso il comando `rostopic list`.
+
+Procediamo con un esempio:
+
+Aprire il terminale e facciamo partire un package semplice, di un drone aereo:
+
+        $ cd diffDrive_ws
+        $ source devel/setup.bash
+        $ roslaunch rotors_gazebo mav_hovering_example.launch
+
+Una volta fatto partire Gazebo apriamo un altro terminale:
+
+        $ rostopic list
+        
+Comparirà una lista di funzionalità che sarà possibile utilizzare.
+
+Tutte le funzionalità che è possibile utilizzare con *rostopic* sono le seguenti:
+
+       rostopic bw    -- display bandwidth used by topic
+       rostopic delay -- display delay for topic which has header
+       rostopic echo  -- print messages to screen
+       rostopic find  -- find topics by type
+       rostopic hz    -- display publishing rate of topic
+       rostopic info  -- print information about active topic
+       rostopic list  -- print information about active topics
+       rostopic pub   -- publish data to topic
+       rostopic type  -- print topic type
+       
+Nel nostro caso per semplicità useremo il comando `$ rostopic echo <nome topic>` per poter visualizzare i dati in output sul terminale.
+
+       $ rostopic echo /firfly/odometry_sensor1/odometry
+       
+Verranno visualizzati i dati del sensore sul terminale.
+
+Per uscire dalla stampa-dati digitare `Ctrl-C`.
+
+<img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_08.png"/>
 _________________________________________________________________________________________
 
 <a href="http://gazebosim.org/"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/gazebo_logo.png"/> <a href="https://www.ros.org//"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/ros_logo.png"/> <a href="https://www.ubuntu-it.org/"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/ubuntu_logo.png"/>
