@@ -205,9 +205,9 @@ Cliccando su un componente è possibile vedere le sotto-componenti di cui è com
 
 In basso è presente la timeline della simulazione e all'inizio di questa timeline troviamo il bottone di play/pausa che una volta cliccato congela lo stato della simulazione (se si clicca 'pausa') o la fa avanzare nel tempo (se si clicca 'play'). Nella simulazione che si è fatta partire (mav_hovering_example.launch) viene fatto fluttuare a mezz'aria il drone attraverso le caratteristiche di odometria.
 
-### <a name="control"/></a> 5.1. Controllo drone da tastiera
+### <a name="control"/></a> 5.1. Controllo drone da tastiera/joystick
 
-In questo paragrafo vedremo come controllare un drone attraverso i comandi impartiti da tastiera.
+In questo paragrafo vedremo come controllare un drone attraverso i comandi impartiti da tastiera o da joystic.
 
 *N.B. Nella macchina virtuale scaricata saranno già presente tutti i pacchetti per permettere di controllare un drone. In altri casi bisogna seguire la guida presente a [questo link](https://github.com/ethz-asl/rotors_simulator/wiki/Setup-virtual-keyboard-joystick)*
 
@@ -234,6 +234,18 @@ Per poter far partire una simulazione con drone controllabile da tastiera, segui
      
   * Sarà possibile controllare il drone dopo aver cliccato play
   * I controlli si focalizzano su 8 tasti principali: W, A, S, D, ↓, ↑, →, ←.
+  * I controlli sono estremamente sensibili e bisogna prendere esperienza
+  
+Per poter far partire una simulazione con drone controllabile da Joystick, seguire questi passi:
+ * Connettere un joystick al PC tramite porta USB o Bluetooth
+ * Aprire il terminale
+ 
+         $ cd diffDrive_ws
+         $ source devel/setup.bash
+         $ roslaunch rotors_gazebo mav_with_joy.launch mav_name:=firefly world_name:=basic
+ 
+ * Sarà possibile controllare il drone dopo aver cliccato play
+  * I controlli si focalizzano su L2 e sugli analogici per modulare i valori di accelerazione, pitch, roll e thrust
   * I controlli sono estremamente sensibili e bisogna prendere esperienza
   
  ### <a name="plugin"/></a> 5.2. Utilizzo Plugin
