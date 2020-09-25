@@ -10,7 +10,9 @@ Versione ROS Melodic<br>
   * <a href="#gest-ros-pac">Package</a>
 * <a href="#run">Lancio Programma</a>
 * <a href="#command">Uso e Comandi di Gazebo</a>
-  * <a href="#control">Controllo Drone da Tastiera</a>
+  * <a href="#control">Controllo</a>
+    * <a href="#control-key">Tastiera</a>
+    * <a href="#control-joy">Joypad</a>
   * <a href="#plugin">Utilizzo Plugin</a>
     * <a href="#camera">Camera</a>
 
@@ -205,9 +207,9 @@ Cliccando su un componente è possibile vedere le sotto-componenti di cui è com
 
 In basso è presente la timeline della simulazione e all'inizio di questa timeline troviamo il bottone di play/pausa che una volta cliccato congela lo stato della simulazione (se si clicca 'pausa') o la fa avanzare nel tempo (se si clicca 'play'). Nella simulazione che si è fatta partire (mav_hovering_example.launch) viene fatto fluttuare a mezz'aria il drone attraverso le caratteristiche di odometria.
 
-### <a name="control"/></a> 5.1. Controllo drone da tastiera/joystick
-
-In questo paragrafo vedremo come controllare un drone attraverso i comandi impartiti da tastiera o da joystic.
+### <a name="control"/></a> 5.1. Controllo del drone
+#### <a name="control-key"/></a> 5.1.1. Tastiera
+In questo paragrafo vedremo come controllare un drone attraverso i comandi impartiti da tastiera.
 
 *N.B. Nella macchina virtuale scaricata saranno già presente tutti i pacchetti per permettere di controllare un drone. In altri casi bisogna seguire la guida presente a [questo link](https://github.com/ethz-asl/rotors_simulator/wiki/Setup-virtual-keyboard-joystick)*
 
@@ -236,8 +238,9 @@ Per poter far partire una simulazione con drone controllabile da tastiera, segui
   * I controlli si focalizzano su 8 tasti principali: W, A, S, D, ↓, ↑, →, ←.
   * I controlli sono estremamente sensibili e bisogna prendere esperienza
   
-Per poter far partire una simulazione con drone controllabile da Joystick, seguire questi passi:
- * Connettere un joystick al PC tramite porta USB o Bluetooth
+#### <a name="control-joy"/></a> 5.1.1. Joypad
+Per poter far partire una simulazione con drone controllabile da Joypad, seguire questi passi:
+ * Connettere un joypad al PC tramite porta USB o Bluetooth
  * Aprire il terminale
  
          $ cd diffDrive_ws
