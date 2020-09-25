@@ -10,7 +10,7 @@ Versione ROS Melodic<br>
   * <a href="#gest-ros-pac">Package</a>
 * <a href="#run">Lancio Programma</a>
 * <a href="#command">Uso e Comandi di Gazebo</a>
-  * <a href="#control">Controllo</a>
+  * <a href="#control">Controllo del drone</a>
     * <a href="#control-key">Tastiera</a>
     * <a href="#control-joy">Joypad</a>
   * <a href="#plugin">Utilizzo Plugin</a>
