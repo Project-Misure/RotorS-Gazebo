@@ -238,7 +238,7 @@ Per poter far partire una simulazione con drone controllabile da tastiera, segui
   * I controlli si focalizzano su 8 tasti principali: W, A, S, D, ↓, ↑, →, ←.
   * I controlli sono estremamente sensibili e bisogna prendere esperienza
   
-#### <a name="control-joy"/></a> 5.1.1. Joypad
+#### <a name="control-joy"/></a> 5.1.2. Joypad
 Per poter far partire una simulazione con drone controllabile da Joypad, seguire questi passi:
  * Connettere un joypad al PC tramite porta USB o Bluetooth
  * Aprire il terminale
