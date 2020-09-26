@@ -465,9 +465,15 @@ Per uscire dalla stampa-dati digitare `Ctrl-C`.
  
        $ rostopic echo /firfly/odometry_sensor1/odometry
    
-   Otterremo la seguente schermata
+   Otterremo la seguente schermata:
+   
    <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/IMU.png"/>
-
+   
+   Vediamo di fatto riportati tutti i parametri relativi al sistema IMU i quali varieranno nel tempo in base agli input impartiti da tastiera.
+   
+  * Fatto ciò non ci resta che impartire degli input da tastiera e noteremo i cambiamenti delle seguenti variabili :
+   * Con i comandi W ed S possiamo aumentare e diminuire l'accelerazione delle eliche del nostro drone causando variazioni delle variabili 
+ 
 _________________________________________________________________________________________
 
 <a href="http://gazebosim.org/"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/gazebo_logo.png"/> <a href="https://www.ros.org//"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/ros_logo.png"/> <a href="https://www.ubuntu-it.org/"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/ubuntu_logo.png"/>
