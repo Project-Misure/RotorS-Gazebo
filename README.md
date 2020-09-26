@@ -463,7 +463,7 @@ Per uscire dalla stampa-dati digitare `Ctrl-C`.
  * Dunque carichiamo il file di launch che integra il plugin di ROS per il controllo da tastiera come visto <a href="#control-key">qui</a>
  * Apriamo una nuova finestra da terminale su cui lanciamo il seguente comando
  
-       $ rostopic echo /firfly/odometry_sensor1/odometry
+       $ rostopic echo /firfly/imu
    
    Otterremo la seguente schermata:
    
@@ -472,7 +472,21 @@ Per uscire dalla stampa-dati digitare `Ctrl-C`.
    Vediamo di fatto riportati tutti i parametri relativi al sistema IMU i quali varieranno nel tempo in base agli input impartiti da tastiera.
    
   * Ad esempio modulando solamente l'accelerazione delle eliche del nostro drone con i comandi W e S osserveremo variazioni delle variabili di `linear_acceleration` sul parametro `z`. Oppure modificando l'orientamento con le freccette direzionali a cambiare saranno le variabili di `orientation`. Ovviamente le variazioni possono essere innumerevoli e dipendenti da molti fattori come ad esempio il vento o altri fenomeni che possono essere implementati in Gazebo.
+
+### <a name="output"/></a> 7.2 ODOMETRY
+ In queso paragrafo mostreremo i cambiamenti che si registrano relativamente all'odometria del nostro drone a seguito di alcuni input dalla tastiera.
+ * Dunque carichiamo il file di launch che integra il plugin di ROS per il controllo da tastiera come visto <a href="#control-key">qui</a>
+ * Apriamo una nuova finestra da terminale su cui lanciamo il seguente comando
  
+       $ rostopic echo /firfly/odometry_sensor1/odometry
+   
+   Otterremo la seguente schermata:
+   
+   <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/odometry.png"/>
+   
+   Vediamo di fatto riportati tutti i parametri relativi all'odometria i quali varieranno nel tempo in base agli input impartiti da tastiera.
+   
+  * Ad esempio modulando solamente l'accelerazione delle eliche del nostro drone con i comandi W e S osserveremo variazioni delle variabili di `linear_acceleration` sul parametro `z`. Oppure modificando l'orientamento con le freccette direzionali a cambiare saranno le variabili di `orientation`. Ovviamente le variazioni possono essere innumerevoli e dipendenti da molti fattori come ad esempio il vento o altri fenomeni che possono essere implementati in Gazebo.
 _________________________________________________________________________________________
 
 <a href="http://gazebosim.org/"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/gazebo_logo.png"/> <a href="https://www.ros.org//"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/ros_logo.png"/> <a href="https://www.ubuntu-it.org/"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/ubuntu_logo.png"/>
