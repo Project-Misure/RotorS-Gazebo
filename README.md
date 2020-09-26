@@ -464,6 +464,9 @@ Per uscire dalla stampa-dati digitare `Ctrl-C`.
  * Apriamo una nuova finestra da terminale su cui lanciamo il seguente comando
  
        $ rostopic echo /firfly/odometry_sensor1/odometry
+   
+   Otterremo la seguente schermata
+   <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/IMU.png"/>
 
 _________________________________________________________________________________________
 
