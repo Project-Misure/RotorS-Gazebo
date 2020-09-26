@@ -471,7 +471,7 @@ Per uscire dalla stampa-dati digitare `Ctrl-C`.
    
    Vediamo di fatto riportati tutti i parametri relativi al sistema IMU i quali varieranno nel tempo in base agli input impartiti da tastiera.
    
-  * Ad esempio modulando solamente l'accelerazione delle eliche del nostro drone con i comandi W e S osserveremo variazioni delle variabili di *linear_acceleration* sul parametro *z*. Oppure modificando l'orientamento con le freccette direzionali a cambiare saranno le variabili in *orientation*. Ovviamente le variazioni possono essere innumerevoli e dipendenti da molti fattori come ad esempio il vento o altri fenomeni che possono essere implementati in Gazebo.
+  * Ad esempio modulando solamente l'accelerazione delle eliche del nostro drone con i comandi W e S osserveremo variazioni delle variabili di `linear_acceleration` sul parametro `z`. Oppure modificando l'orientamento con le freccette direzionali a cambiare saranno le variabili di `orientation`. Ovviamente le variazioni possono essere innumerevoli e dipendenti da molti fattori come ad esempio il vento o altri fenomeni che possono essere implementati in Gazebo.
  
 _________________________________________________________________________________________
 
