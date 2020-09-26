@@ -460,7 +460,11 @@ Per uscire dalla stampa-dati digitare `Ctrl-C`.
 ## <a name="output"/></a> 7. Esempi
  ### <a name="output"/></a> 7.1 IMU
  In queso paragrafo mostreremo i cambiamenti che si registrano sul sistema IMU (inertial measurement unit) del nostro drone a seguito di alcuni input dalla tastiera.
- Dunque carichiamo il file di launch che integra il plugin di ROS per il controllo da tastiera come visto <a href="#control-key">qui</a>
+ * Dunque carichiamo il file di launch che integra il plugin di ROS per il controllo da tastiera come visto <a href="#control-key">qui</a>
+ * Apriamo una nuova finestra da terminale su cui lanciamo il seguente comando
+ 
+       $ rostopic echo /firfly/odometry_sensor1/odometry
+
 _________________________________________________________________________________________
 
 <a href="http://gazebosim.org/"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/gazebo_logo.png"/> <a href="https://www.ros.org//"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/ros_logo.png"/> <a href="https://www.ubuntu-it.org/"><img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/ubuntu_logo.png"/>
