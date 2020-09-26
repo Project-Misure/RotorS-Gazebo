@@ -17,8 +17,8 @@ Versione ROS Melodic<br>
     * <a href="#camera">Camera</a>
 * <a href="#output">Output</a>
 * <a href="#esempi">Esempi</a>
- * <a href="#esempi-imu">IMU</a>
- * <a href="#esempi-odo">Odometry</a>
+  * <a href="#esempi-imu">IMU</a>
+  * <a href="#esempi-odo">Odometria</a>
 
 # Guida passo-passo
 
