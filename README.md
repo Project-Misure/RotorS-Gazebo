@@ -15,6 +15,7 @@ Versione ROS Melodic<br>
     * <a href="#control-joy">Joypad</a>
   * <a href="#plugin">Utilizzo Plugin</a>
     * <a href="#camera">Camera</a>
+    * <a href="#visensor">VI-Sensor</a>
 * <a href="#output">Output</a>
 * <a href="#esempi">Esempi</a>
   * <a href="#esempi-imu">IMU</a>
@@ -413,6 +414,36 @@ Importare tale codice nel file del drone `.xacro`, mentre nel file del drone con
 Tali codici attivano l'uso della camera su un qualsiasi drone. 
 
 *N.B. Per droni aerei, o di forma differente, alcuni dei dati dovranno essere modificati per poter essere adattati al robot stesso. Nell'esempio si parla di un drone di terra molto semplice, con due ruote e una scocca a forma di parallelepipedo*
+
+#### <a name="visensor"/></a> 5.3 VI-SENSOR
+VI-SENSOR, acronimo di Visual Inertial Sensor, è un sensore di visione utilizzato con la libreria ROS come camera per la raccolta di immagini.
+
+Tale sensore può essere piazzato ovunque, nella scena, su un robot o su qualsiasi altra superficie presente in scena.
+
+Per poter utilizzare tale sensore ricorriamo a una libreria già installata e presente nella repo scaricata a inizio tutorial (rotors_gazebo).
+Seguiamo i senìguenti passi per poter utilizzare un VI-SENSOR su qualsiasi drone vogliamo:
+
+     $ roslaunch rotors_gazebo mav_hovering_example_with_vi_sensor.launch
+     
+Avviamo il simulatore
+
+     $ rosrun rviz rviz
+     
+Avvieremo RVIZ per verificare i percorsi e tutti gli output del VI-SENSOR presente in uan scena aperta di Gazebo.
+
+Cliccando su "ADD" si aprirà una schermata, dovremo inserire una "Image" su RVIZ e cliccare OK.
+Fatto ciò avremo a disposizione una finestra su quello che verrà preso dalla camera.
+Clicchiamo su "Image Topic" e selezioniamo uno dei persorsi che ci verrano mostrati (sono i percorsi di output per poter visualizzare le immagini prese da VI-SENSOR).
+
+Trovato il percorso voluto posziamo chiudere RVIZ (se si vuole) e aprire un altro terminale ed inserire tale percorso al seguente codice:
+
+    $ rosrun image_view image_view image:= <PATH>
+    
+Nel nostro caso, ad esempio:
+
+    $ rosrun image_view image_view image:= /firefly/vi_sensor/left/image_raw
+    
+Visualizzeremo su una finestra l'immagine catturata dalla camera.
 
 
 ## <a name="output"/></a> 6. Output
