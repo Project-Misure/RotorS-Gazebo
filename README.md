@@ -462,6 +462,48 @@ Il codice da utilizzare, per immettere una camera VI-SENSOR in scena o su un dro
        <origin xyz="0.1 0.0 -0.03" rpy="0.0 0.1 0.0" />
      </xacro:vi_sensor_macro>
 
+Con l'aggiunta di un file base presente in `rotors_simulator/rotors_description/urdf/vi_sensor_base.xacro` che ha al suo interno l'inport effettivo del codice del VI-SENSOR vero e proprio:
+
+     <robot name="vi_sensor" xmlns:xacro="http://ros.org/wiki/xacro">
+        <xacro:property name="namespace" value="vi_sensor" />
+        <xacro:include filename="$(find rotors_description)/urdf/component_snippets.xacro" />
+
+        <link name="base_link">
+
+          <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+              <box size="0.1 0.1 1.0" />
+            </geometry>
+          </collision>
+
+          <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+              <box size="0.1 0.1 1.0" />
+            </geometry>
+            <material name="black" />
+          </visual>
+
+          <inertial>
+            <mass value="100" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+          </inertial>
+        </link>
+
+        <xacro:vi_sensor_macro
+          namespace="${namespace}"
+          parent_link="base_link"
+          enable_cameras="$(arg enable_cameras)"
+          enable_depth="$(arg enable_depth)"
+          enable_ground_truth="$(arg enable_ground_truth)">
+          <origin xyz="0.0 0.0 0.6" rpy="0 0 0" />
+        </xacro:vi_sensor_macro>
+
+      </robot>
+      
+Tutti i codici attingono informazioni da questo.
 
 ## <a name="output"/></a> 6. Output
 
