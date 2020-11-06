@@ -451,6 +451,17 @@ Nel nostro caso, ad esempio:
     
 Visualizzeremo su una finestra l'immagine catturata dalla camera.
 
+Il codice da utilizzare, per immettere una camera VI-SENSOR in scena o su un drone è il seguente:
+
+     <xacro:vi_sensor_macro
+       namespace="${namespace}/vi_sensor"
+       parent_link="${namespace}/base_link"
+       enable_cameras="true"
+       enable_depth="true"
+       enable_ground_truth="true">
+       <origin xyz="0.1 0.0 -0.03" rpy="0.0 0.1 0.0" />
+     </xacro:vi_sensor_macro>
+
 
 ## <a name="output"/></a> 6. Output
 
