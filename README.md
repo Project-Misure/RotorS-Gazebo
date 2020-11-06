@@ -418,10 +418,10 @@ Tali codici attivano l'uso della camera su un qualsiasi drone.
 #### <a name="visensor"/></a> 5.3 VI-SENSOR
 VI-SENSOR, acronimo di Visual Inertial Sensor, è un sensore di visione utilizzato con la libreria ROS come camera per la raccolta di immagini.
 
-Tale sensore può essere piazzato ovunque, nella scena, su un robot o su qualsiasi altra superficie presente in scena.
+Tale sensore può essere piazzato ovunque, nella scena, su un robot o su qualsiasi altra superficie.
 
 Per poter utilizzare tale sensore ricorriamo a una libreria già installata e presente nella repo scaricata a inizio tutorial (rotors_gazebo).
-Seguiamo i senìguenti passi per poter utilizzare un VI-SENSOR su qualsiasi drone vogliamo:
+Seguiamo i seguenti passi per poter utilizzare un VI-SENSOR su qualsiasi drone vogliamo:
 
      $ roslaunch rotors_gazebo mav_hovering_example_with_vi_sensor.launch
      
@@ -429,13 +429,19 @@ Avviamo il simulatore
 
      $ rosrun rviz rviz
      
-Avvieremo RVIZ per verificare i percorsi e tutti gli output del VI-SENSOR presente in uan scena aperta di Gazebo.
+Avvieremo RVIZ per verificare i percorsi e tutti gli output del VI-SENSOR presente in una scena aperta di Gazebo, questo ci permette di capire quali siano gli output topic del sensore e quindi riuscire a intercettarli in modo più rapido e preciso.
 
-Cliccando su "ADD" si aprirà una schermata, dovremo inserire una "Image" su RVIZ e cliccare OK.
-Fatto ciò avremo a disposizione una finestra su quello che verrà preso dalla camera.
+Aperto RVIZ seguiamo i seguenti passi:
+
+ * Cliccare su "ADD" 
+ * "Image" 
+ * OK
+ 
+Fatto ciò avremo a disposizione una finestra su quello che verrà preso dalla camera VI-SENSOR.
 Clicchiamo su "Image Topic" e selezioniamo uno dei persorsi che ci verrano mostrati (sono i percorsi di output per poter visualizzare le immagini prese da VI-SENSOR).
+La camera in questione ha più output, infatti riesce a effettuare delle riprese da più angolazioni, quindi sarà possibile acquisire una serie di immagini per avere una precisione sulla visione periferica di un robot.
 
-Trovato il percorso voluto posziamo chiudere RVIZ (se si vuole) e aprire un altro terminale ed inserire tale percorso al seguente codice:
+Trovato il percorso voluto possiamo chiudere RVIZ (se si vuole) e aprire un altro terminale e digitare:
 
     $ rosrun image_view image_view image:= <PATH>
     
