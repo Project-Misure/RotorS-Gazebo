@@ -256,7 +256,11 @@ Per poter far partire una simulazione con drone controllabile da Joypad, seguire
   * I controlli si focalizzano su L2 e sugli analogici per modulare i valori di accelerazione, pitch, roll e thrust
   * I controlli sono estremamente sensibili e bisogna prendere esperienza
   
- #### <a name="mapcommand"/></a> 5.2. Mappatura Comandi
+ ### <a name="mapcommand"/></a> 5.2. Mappatura Comandi
+ 
+ Di seguito riportiamo la sequenza di nodi e topic che entrano in gioco durante la gestione di un drone attraverso l'utilizzo dei comandi da tastiera (o joypad).
+ 
+ <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/rosgraph_with_keyboard.png"/>
   
  ### <a name="plugin"/></a> 5.3. Utilizzo Plugin
  Per poter utilizzare un plugin, in ROS+Gazebo, ricorriamo allòa guida ufficiale e facciamo un esempio pratico.
