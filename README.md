@@ -1,7 +1,9 @@
 # ROS-Gazebo
-Software di simulazione per droni: <br>
-Versione GAZEBO 9.0<br>
-Versione ROS Melodic<br>
+
+**Software di simulazione per droni:** <br>
+
+**_Versione GAZEBO_ --->  9.0**<br>
+**_Versione ROS_ ------>  Melodic**<br>
 
 # Indice
 * <a href="#install">Installazione</a>
