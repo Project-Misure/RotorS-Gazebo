@@ -261,6 +261,11 @@ Per poter far partire una simulazione con drone controllabile da Joypad, seguire
  Di seguito riportiamo la sequenza di nodi e topic che entrano in gioco durante la gestione di un drone attraverso l'utilizzo dei comandi da tastiera (o joypad).
  
  <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/rosgraph_with_keyboard.png"/>
+ 
+ Ci andremo a concentrare solamente su una parte specifica del grafico: quella che tratta il passaggio dei parametri di beccheggio, rollio e imbardata del drone (considerando un drone aereo).
+ Di seguito il grafico con evidenziata la parte da trattare:
+ 
+ <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/mappatura_tastiera.png"/>
   
  ### <a name="plugin"/></a> 5.3. Utilizzo Plugin
  Per poter utilizzare un plugin, in ROS+Gazebo, ricorriamo allòa guida ufficiale e facciamo un esempio pratico.
