@@ -3,7 +3,7 @@
 **Software di simulazione per droni:** <br>
 
 **_Versione GAZEBO_ --->  9.0**<br>
-**_Versione ROS_------->  Melodic**<br>
+**_Versione ROS_ ------->  Melodic**<br>
 
 # Indice
 * <a href="#install">Installazione</a>
