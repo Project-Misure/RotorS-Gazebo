@@ -20,9 +20,9 @@
     * <a href="#camera">Camera</a>
     * <a href="#visensor">VI-Sensor</a>
 * <a href="#output">Output</a>
-* <a href="#esempi">Esempi</a>
-  * <a href="#esempi-imu">IMU</a>
-  * <a href="#esempi-odo">Odometria</a>
+  * <a href="#esempi">Esempi</a>
+    * <a href="#esempi-imu">IMU</a>
+    * <a href="#esempi-odo">Odometria</a>
 
 # Guida passo-passo
 
@@ -569,8 +569,8 @@ Per uscire dalla stampa-dati digitare `Ctrl-C`.
 
 <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/Screen/schermata_08.png"/>
 
-## <a name="esempi"/></a> 7. Esempi
- ### <a name="esempi-imu"/></a> 7.1 IMU
+### <a name="esempi"/></a> 6.1. Esempi
+ #### <a name="esempi-imu"/></a> 6.1.1. IMU
  In queso paragrafo mostreremo i cambiamenti che si registrano sul sistema IMU (inertial measurement unit) del nostro drone a seguito di alcuni input dalla tastiera.
  * Dunque carichiamo il file di launch che integra il plugin di ROS per il controllo da tastiera come visto <a href="#control-key">qui</a>
  * Apriamo una nuova finestra da terminale su cui lanciamo il seguente comando
@@ -585,7 +585,7 @@ Per uscire dalla stampa-dati digitare `Ctrl-C`.
    
   * Ad esempio modulando solamente l'accelerazione delle eliche del nostro drone con i comandi W e S osserveremo variazioni delle variabili di `linear_acceleration` sul parametro `z`. Oppure modificando l'orientamento con le freccette direzionali a cambiare saranno le variabili di `orientation`. Ovviamente le variazioni possono essere innumerevoli e dipendenti da molti fattori come ad esempio il vento o altri fenomeni che possono essere implementati in Gazebo.
 
-### <a name="esempi-odo"/></a> 7.2 Odometria
+#### <a name="esempi-odo"/></a> 6.1.2. Odometria
  In queso paragrafo mostreremo i cambiamenti che si registrano relativamente all'odometria del nostro drone a seguito di alcuni input dalla tastiera.
  * Dunque carichiamo il file di launch che integra il plugin di ROS per il controllo da tastiera come visto <a href="#control-key">qui</a>
  * Apriamo una nuova finestra da terminale su cui lanciamo il seguente comando
