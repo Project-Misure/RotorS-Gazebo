@@ -267,7 +267,7 @@ Per poter far partire una simulazione con drone controllabile da Joypad, seguire
  
  <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/mappatura_tastiera.png"/>
  
- *N.B. nelle immagini precedenti i rettangoli identificano un topic, gli ovali un nodo.*
+ *N.B. nelle immagini precedenti i rettangoli identificano un <a href="#output">topic</a>, gli ovali un nodo.*
  
  * **joy_node** :  è presente solo in codice binario,riusciamo a comprenderne il funzionamento grazie alle informazioni presenti nei successivi nodi; legge i comandi da tastiera o joystick e li trasforma in valori numerici compresi tra -1 e 1 pubblicandoli successivamente nel topic `/firefly/joy`.
  * **rotors_joy_interface** : calcola il valore di yaw, pitch e roll a partire dai valori compresi tra -1 e 1 provenienti dal topic `/firefly/joy`; di fatto moltiplica questi valori per il massimo valore che possono assumere e per il relativo segno, in modo da ottenere un valore scalato sulla base di quanto a lungo si sta tenendo premuto il tasto ed infine pubblica i risultati sul topic `firefly/command/roll_pitch_yawrate_thrust`.
