@@ -266,6 +266,12 @@ Per poter far partire una simulazione con drone controllabile da Joypad, seguire
  Di seguito il grafico con evidenziata la parte da trattare:
  
  <img src="https://github.com/Project-Misure/RotorS-Gazebo/blob/master/Img/mappatura_tastiera.png"/>
+ 
+ *N.B. nelle immagini precedenti i rettangoli identificano un topic, gli ovali un nodo.*
+ 
+ * **joy_node** :  è presente solo in codice binario,riusciamo a comprenderne il funzionamento grazie alle informazioni presenti nei successivi nodi; legge i comandi da tastiera o joystick e li trasforma in valori numerici compresi tra -1 e 1 pubblicandoli successivamente nel topic `/firefly/joy`.
+ * **rotors_joy_interface** : calcola il valore di yaw, pitch e roll a partire dai valori compresi tra -1 e 1 provenienti dal topic `/firefly/joy`; di fatto moltiplica questi valori per il massimo valore che possono assumere e per il relativo segno, in modo da ottenere un valore scalato sulla base di quanto a lungo si sta tenendo premuto il tasto ed infine pubblica i risultati sul topic `firefly/command/roll_pitch_yawrate_thrust`.
+ * **roll_pitch_yawrate_thrust_controller_node** : prende in input i valori di riferimento dal topic `firefly/command/roll_pitch_yawrate_thrust` e li usa per comandare l'attuatore attraverso una pubblicazione sul topic specifico di `firefly/command` chiamato `firefly/command/motor_speed` che a sua volta richiamerà il nodo principale di gazebo per la pbblicazione dei valori sul topic generale del `firefly/gazebo`.
   
  ### <a name="plugin"/></a> 5.3. Utilizzo Plugin
  Per poter utilizzare un plugin, in ROS+Gazebo, ricorriamo allòa guida ufficiale e facciamo un esempio pratico.
