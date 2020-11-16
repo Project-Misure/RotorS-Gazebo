@@ -13,6 +13,7 @@ Versione ROS Melodic<br>
   * <a href="#control">Controllo del drone</a>
     * <a href="#control-key">Tastiera</a>
     * <a href="#control-joy">Joypad</a>
+  * <a href="#mapcommand">Mappatura Comandi</a>
   * <a href="#plugin">Utilizzo Plugin</a>
     * <a href="#camera">Camera</a>
     * <a href="#visensor">VI-Sensor</a>
@@ -255,7 +256,9 @@ Per poter far partire una simulazione con drone controllabile da Joypad, seguire
   * I controlli si focalizzano su L2 e sugli analogici per modulare i valori di accelerazione, pitch, roll e thrust
   * I controlli sono estremamente sensibili e bisogna prendere esperienza
   
- ### <a name="plugin"/></a> 5.2. Utilizzo Plugin
+ #### <a name="mapcommand"/></a> 5.2. Mappatura Comandi
+  
+ ### <a name="plugin"/></a> 5.3. Utilizzo Plugin
  Per poter utilizzare un plugin, in ROS+Gazebo, ricorriamo allòa guida ufficiale e facciamo un esempio pratico.
  I plugin Gazebo offrono ai tuoi modelli URDF(Unified Robotic Description Format), ovvero i file che descrivono un determinato robot o drone che deve essere utilizzato, maggiori funzionalità e possono collegare messaggi ROS e chiamate di servizio per l'uscita del sensore e l'ingresso del motore.
  
