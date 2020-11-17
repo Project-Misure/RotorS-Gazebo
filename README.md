@@ -273,6 +273,53 @@ Per poter far partire una simulazione con drone controllabile da Joypad, seguire
  
  * **joy_node** :  è presente solo in codice binario,riusciamo a comprenderne il funzionamento grazie alle informazioni presenti nei successivi nodi; legge i comandi da tastiera o joystick e li trasforma in valori numerici compresi tra -1 e 1 pubblicandoli successivamente nel topic `/firefly/joy`.
  * **rotors_joy_interface** : calcola il valore di yaw, pitch e roll a partire dai valori compresi tra -1 e 1 provenienti dal topic `/firefly/joy`; di fatto moltiplica questi valori per il massimo valore che possono assumere e per il relativo segno, in modo da ottenere un valore scalato sulla base di quanto a lungo si sta tenendo premuto il tasto ed infine pubblica i risultati sul topic `firefly/command/roll_pitch_yawrate_thrust`.
+ 
+ `rotors_simulator/rotors_joy_interface/src/joy.cpp`:
+ 
+         //--------------- SETAGGIO PARAMETRI ---------------------------------------
+         pnh.param("max_v_xy", max_.v_xy, 1.0);  // [m/s]
+         pnh.param("max_roll", max_.roll, 10.0 * M_PI / 180.0);  // [rad]
+         pnh.param("max_pitch", max_.pitch, 10.0 * M_PI / 180.0);  // [rad]
+         pnh.param("max_yaw_rate", max_.rate_yaw, 45.0 * M_PI / 180.0);  // [rad/s]
+         pnh.param("max_thrust", max_.thrust, 30.0);  // [N]
+         
+         ...
+         
+         void Joy::JoyCallback(const sensor_msgs::JoyConstPtr& msg) {
+         current_joy_ = *msg;
+         control_msg_.roll = msg->axes[axes_.roll] * max_.roll * axes_.roll_direction;
+         control_msg_.pitch = msg->axes[axes_.pitch] * max_.pitch * axes_.pitch_direction;
+
+         if (msg->buttons[buttons_.yaw_left]) {
+           current_yaw_vel_ = max_.rate_yaw;
+         }
+         else if (msg->buttons[buttons_.yaw_right]) {
+           current_yaw_vel_ = -max_.rate_yaw;
+         }
+         else {
+           current_yaw_vel_ = 0;
+         }
+         control_msg_.yaw_rate = current_yaw_vel_;
+
+         if (is_fixed_wing_) {
+           double thrust = msg->axes[axes_.thrust] * axes_.thrust_direction;
+           control_msg_.thrust.x = (thrust >= 0.0) ? thrust : 0.0;
+         }
+         else {
+           control_msg_.thrust.z = (msg->axes[axes_.thrust] + 1) * max_.thrust / 2.0 * axes_.thrust_direction;
+         }
+
+         ros::Time update_time = ros::Time::now();
+         control_msg_.header.stamp = update_time;
+         control_msg_.header.frame_id = "rotors_joy_frame";
+         Publish();
+       }
+
+       //------------ PUBBLICAZIONE PARAMETRI SUL TOPIC --------------------------------------
+       void Joy::Publish() {
+         ctrl_pub_.publish(control_msg_);
+       }
+         
  * **roll_pitch_yawrate_thrust_controller_node** : prende in input i valori di riferimento dal topic `firefly/command/roll_pitch_yawrate_thrust` e li usa per comandare l'attuatore attraverso una pubblicazione sul topic specifico di `firefly/command` chiamato `firefly/command/motor_speed` che a sua volta richiamerà il nodo principale di gazebo per la pbblicazione dei valori sul topic generale del `firefly/gazebo`.
   
  ### <a name="plugin"/></a> 5.3. Utilizzo Plugin
